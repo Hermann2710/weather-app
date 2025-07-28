@@ -1,69 +1,58 @@
-# React + TypeScript + Vite
+# Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Une application météo moderne construite avec React, TypeScript et Vite.
 
-Currently, two official plugins are available:
+## 🚀 Fonctionnalités
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Recherche de la météo par ville
+- Affichage des conditions météo actuelles : température, description, icône
+- Interface responsive et moderne
+- Utilisation de composants UI réutilisables
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [shadcn/ui](https://ui.shadcn.com/) pour les composants UI
+- [lucide-react](https://lucide.dev/) pour les icônes
+- [pnpm](https://pnpm.io/) pour la gestion des dépendances
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+pnpm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🏃‍♂️ Démarrer le projet
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+pnpm dev
 ```
+
+L’application sera accessible sur [http://localhost:3000](http://localhost:3000).
+
+## ✨ Exemple d’utilisation
+
+```tsx
+import { WeatherCard } from "./src/components/weather-card"
+;<WeatherCard city='Paris' />
+```
+
+## 📁 Structure du projet
+
+- `src/components/` : Composants UI
+- `src/contexts/` : Contexts React pour la gestion d’état
+- `src/types/` : Types TypeScript
+
+## 🤝 Contribuer
+
+1. Fork le repo
+2. Crée une branche : `git checkout -b feature/ma-nouvelle-fonctionnalite`
+3. Commit tes changements : `git commit -m 'Ajoute une nouvelle fonctionnalité'`
+4. Push la branche : `git push origin feature/ma-nouvelle-fonctionnalite`
+5. Ouvre une Pull Request
+
+## 📄 Licence
+
+MIT
