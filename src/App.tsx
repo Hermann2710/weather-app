@@ -1,3 +1,9 @@
+import WeatherUI from "./components/weather-ui"
+
 export default function App() {
-  return <div>App {import.meta.env.VITE_API_KEY}</div>
+  return (
+    <div className='min-h-screen bg-gray-100 flex items-center justify-center'>
+      <WeatherUI />
+    </div>
+  )
 }

@@ -20,7 +20,7 @@ export const WeatherContextProvider = ({
         setLoading(true)
         setError("")
         const res = await fetch(
-          `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
+          `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&lang=fr`
         )
         if (!res.ok) throw new Error("Ville non trouvée")
         const data: WeatherData = await res.json()
